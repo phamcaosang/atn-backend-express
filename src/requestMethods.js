@@ -7,12 +7,12 @@ const TOKEN  = localStorage.getItem("persist:root") ?
                         JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user).currentUser.accessToken : "") : ""
                         // const TOKEN = ''
 export const publicRequest = axios.create({
-  baseURL: BASE_URL,
+  baseURL: 'https://mern-atn.herokuapp.com/api/',
 });
 
 
 export const userRequest = axios.create({
-  baseURL: BASE_URL,
+  baseURL: 'https://mern-atn.herokuapp.com/api/',
   headers: { token: `Bearer ${TOKEN}` },
 });
 
